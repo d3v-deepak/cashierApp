@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cashierApp</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="container">
+    <span class="brand">cashierApp</span>
+    <p>enter bill amount and get the know the notes to return</p>
+
+    <label for="bill-amount"
+      >Enter bill amount
+      <input id="bill-amount" type="number" />
+    </label>
+    <label for="cash-given"
+      >Enter cash collected
+      <input id="cash-given" type="number" />
+    </label>
+    <button id="return-btn">Return Change</button>
+
+    <br />
+    <p class="error-message"></p>
+    <br />
+    <table class="change-table">
+      <tr>
+        <th>No of Notes</th>
+        <td class="no-of-notes"></td>
+        <td class="no-of-notes"></td>
+        <td class="no-of-notes"></td>
+        <td class="no-of-notes"></td>
+        <td class="no-of-notes"></td>
+        <td class="no-of-notes"></td>
+        <td class="no-of-notes"></td>
+      </tr>
+
+      <tr>
+        <th>Notes</th>
+        <td>2000</td>
+        <td>500</td>
+        <td>100</td>
+        <td>20</td>
+        <td>10</td>
+        <td>5</td>
+        <td>1</td>
+      </tr>
+    </table>
+  </body>
+  <script src="script.js"></script>
+</html>
