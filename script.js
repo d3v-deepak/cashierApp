@@ -17,20 +17,20 @@ function calculateNotes(amount) {
 }
 
 function calculateChange() {
-  if (billAmount.value > 0) {
-    if (cashGiven.value >= billAmount.value) {
-      showErrorMessage("");
-      var amountToReurn = cashGiven.value - billAmount.value;
-      calculateNotes(Number(amountToReurn));
-    } else {
-      showErrorMessage(
-        " cash collected should be more than or equal to bill amount"
-      );
-    }
+  if (
+    Number(billAmount.value) > 0 &&
+    Number(cashGiven.value) >= Number(billAmount.value)
+  ) {
+    showErrorMessage("");
+    var amountToReurn = Number(cashGiven.value) - Number(billAmount.value);
+    calculateNotes(Number(amountToReurn));
+  } else if (Number(cashGiven.value) < Number(billAmount.value)) {
+    showErrorMessage("cash collected is less than bill amount");
   } else {
     showErrorMessage("bill should be greater than 0");
   }
 }
+
 function showErrorMessage(message) {
   errorMeassage.innerHTML = message;
 }
